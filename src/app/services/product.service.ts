@@ -46,6 +46,11 @@ export class ProductService {
   }
 
 
+  getProduct(productId:number):Observable<Product>{
+    const searchUrl=`${this.apiUrl}/${productId}`;
+    return this.httpClient.get<Product>(searchUrl);
+  }
+
 
 }
 
